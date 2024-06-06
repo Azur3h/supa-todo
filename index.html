@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <section class="main__container | flex-column content-center gap-200">
+
+        <div class="flex gap-400">
+            <img class="main__schnauzer" src="/src/assets/schnauzer.svg" alt="">
+            <img class="main__axolotl" src="/src/assets/axolotl.svg" alt="">
+        </div>
+
+        <form id="main__form" class="flex-column content-center gap-100">
+            <input id="main__input" type="text" class="main__input" placeholder="Algún axolotl nuevo?">
+            <button id="main__save-btn" class="main__save-btn">Guardar</button>
+        </form>
+        
+        <ul id="main__list" class="main__list | flex text-center gap-50 wrap"></ul>
+    </section>
+
+    <script type="module" src="index.js"></script>
+</body>
+</html>
