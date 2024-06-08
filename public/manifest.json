@@ -1,31 +1,27 @@
 {
-    "manifest_version": 3,
-    "name": "Supa todo everywhere",
-    "version": "0.1",
-    "description": "A Chrome extension built with React and Supabase",
-    "action": {
-      "default_popup": "index.html"
-    },
-    "permissions": [
-      "storage",
-      "activeTab",
-      "scripting"
-    ],
-    "icons": {
-        "128": "main_icon_128.png",
-        "48": "main_icon_48.png",
-        "16": "main_icon_16.png"
-    },
-    "web_accessible_resources": [
-        {
-        "resources": [
-            "src/assets/axolotl.svg",
-            "src/assets/schnauzer.svg"
-        ],
-        "matches": [
-            "http://*/*",
-            "https://*/*"
-        ]
-        }
+    "name": "Mi PWA",
+    "short_name": "MiPWA",
+    "description": "Una descripción corta de mi PWA",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#ffffff",
+    "icons": [
+      {
+        "src": "main_icon_128.png",
+        "sizes": "128x128",
+        "type": "image/png"
+      },
+      {
+        "src": "main_icon_48.png",
+        "sizes": "48x48",
+        "type": "image/png"
+      },
+      {
+        "src": "main_icon_16.png",
+        "sizes": "16x16",
+        "type": "image/png"
+      }
     ]
 }
+  
