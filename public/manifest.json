@@ -1,0 +1,31 @@
+{
+    "manifest_version": 3,
+    "name": "Supa todo everywhere",
+    "version": "0.1",
+    "description": "A Chrome extension built with React and Supabase",
+    "action": {
+      "default_popup": "index.html"
+    },
+    "permissions": [
+      "storage",
+      "activeTab",
+      "scripting"
+    ],
+    "icons": {
+        "128": "main_icon_128.png",
+        "48": "main_icon_48.png",
+        "16": "main_icon_16.png"
+    },
+    "web_accessible_resources": [
+        {
+        "resources": [
+            "src/assets/axolotl.svg",
+            "src/assets/schnauzer.svg"
+        ],
+        "matches": [
+            "http://*/*",
+            "https://*/*"
+        ]
+        }
+    ]
+}

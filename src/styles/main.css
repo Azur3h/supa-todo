@@ -1,0 +1,402 @@
+
+/* #region IMPORT*/
+
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* #endregion */
+
+/* #region RESET*/
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+	margin: 0;
+	padding: 0;
+	font: inherit;
+}
+
+/* Prevent font size inflation */
+html {
+	-moz-text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+	margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+	list-style: none;
+}
+
+li {
+	list-style-type: none;
+}
+
+/* Set core body defaults */
+html, body {
+	height: 100%;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+	line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+	text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+	color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+	max-width: 100%;
+	display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+	font-family: inherit;
+	font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+	min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+	scroll-margin-block: 5ex;
+}
+
+/* Disable the spinners in Inputs with type="number" */
+/* For Firefox */
+input[type='number'] {
+	-moz-appearance: textfield;
+	appearance: none;
+  }
+  
+/* For Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+  
+
+/* #endregion */
+
+/* #region MAIN*/
+
+:root {
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: light) {
+
+}
+
+:focus-visible {
+    outline: 2px solid black;
+    outline-offset: none;
+}
+
+body {
+    width: 400px;
+    font-family: 'Urbanist', Helvetica, sans-serif;
+	font-weight: 500;
+	background-color: #EEF0F4;
+	overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+	width: 0px;
+	height: 0px;
+}
+
+.main__container {
+    padding: 30px 20px;
+	color: #432000;
+	user-select: none;
+	max-width: 100%;
+}
+
+.main__schnauzer {
+	width: 95px;
+}
+
+.main__axolotl {
+	width: 130px;
+}
+
+.main__input {
+    color: #432000;
+    background-color: #DCE1EB;
+    border: 3px solid #DCE1EB;
+    border-radius: 8px;
+    min-height: 40px;
+    width: min(100%, 300px);
+    padding: 0.25rem 1rem;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+.main__input:hover,
+.main__input:active
+.main__input:focus-visible {
+	border: 3px solid rgba(117, 170, 255, 0.5);
+}
+
+.main__save-btn {
+	width: min(300px, 100%);
+    border: none;
+    color: hsla(182, 25%, 25%, 1);
+	color: #FDFDFD;
+    background-color: hsla(349, 41%, 48%, 1);
+	padding: 1rem 2rem;
+	border-radius: 8px;
+	cursor: pointer;
+
+	&:hover {
+		background-color: hsla(349, 41%, 38%, 1);
+		cursor: pointer;
+	}
+}
+
+.main__list > li {
+	flex-grow: 1;
+	border-radius: 8px;
+	padding: 0.5rem 1rem;
+	cursor: pointer;
+	background-color: #FFFDF8;
+	box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+	overflow-wrap: anywhere;
+	word-break: break-all;
+}
+
+.main__list > li:hover {
+	background-color: #FFECC7;
+}
+
+/* #endregion */
+
+/* #region UTILITIES */  
+
+@media (max-width: 768px) {
+	.hide-on-mobile {
+		display: none !important;
+	}
+}
+
+@media (min-width: 769px) {
+	.hide-on-desktop {
+		display: none !important;
+	}
+}
+
+.relative {
+	position: relative;
+}
+
+.absolute {
+	position: absolute;
+}
+
+.grow {
+	flex-grow: 1;
+}
+
+.align-self-start {
+	align-self: flex-start;
+}
+
+.align-self-end {
+	align-self: flex-end;
+}
+
+.align-self-center {
+	align-self: center;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-start {
+	text-align: start;
+}
+
+.text-end {
+	text-align: end;
+}
+
+.cursor-pointer {
+	cursor: pointer;
+}
+
+.mw-100 {
+	max-width: 100%
+}
+
+.w-40 {
+	width: 40%;
+}
+
+.w-50 {
+	width: 50%;
+}
+
+.w-55 {
+	width: 55%;
+}
+
+.w-60 {
+	width: 60%
+}
+
+.w-100 {
+	width: 100%
+}
+
+.w-inherit{
+	width: inherit;
+}
+
+.text-secondary {
+	font-weight: var(--fw-regular);
+	color: var(--clr-neutral-100)
+}
+
+.flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+.flex {
+	display: flex;
+}
+
+.content-center {
+	align-items: center;
+	justify-content: center;
+}
+
+.center-align {
+	align-items: center;
+}
+
+.space-between {
+	justify-content: space-between;
+}
+
+.justify-start{
+	justify-content: flex-start;
+}
+
+.justify-end{
+	justify-content: flex-end;
+}
+
+.wrap{
+	flex-wrap: wrap;
+}
+
+.gap-30{
+	gap: 0.3rem;
+}
+
+.gap-50 {
+	gap: 0.5rem;
+}
+
+.gap-100 {
+	gap: 1rem;
+}
+
+.gap-200 {
+	gap: 1.4rem;
+}
+
+.gap-400 {
+	gap: 2rem;
+}
+
+.gap-500 {
+	gap: 3rem;
+}
+
+.gap-600 {
+	gap: 4.5rem;
+}
+
+.gap-700 {
+	gap: 7rem;
+}
+
+.gap-800 {
+	gap: 10rem;
+}
+
+.mt-50 {
+	margin-top: var(--size-050);
+}
+
+.mt-100 {
+	margin-top: var(--size-100);
+}
+
+.mt-200 {
+	margin-top: var(--size-200);
+}
+
+.mt-400 {
+	margin-top: var(--size-400);
+}
+
+.mt-500 {
+	margin-top: var(--size-500);
+}
+
+.mt-600 {
+	margin-top: var(--size-600);
+}
+
+.mt-700 {
+	margin-top: var(--size-700);
+}
+
+.mt-800 {
+	margin-top: var(--size-800);
+}
+
+strong {
+	font-weight: bold;
+}
+
+em {
+	font-style: italic;
+}
+
+/* #endregion */
